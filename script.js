@@ -9,10 +9,10 @@ const memoriesSection = document.getElementById("memoriesSection");
 const photoHint = document.getElementById("photoHint");
 
 const romanticMemories = [
-  // Add your own files here after placing them in assets/photos/
-  // "assets/photos/us-1.jpg",
-  // "assets/photos/us-2.jpg",
-  // "assets/photos/us-3.jpg",
+  "assets/photos/img1.jpeg",
+  "assets/photos/img2.jpeg",
+  "assets/photos/img3.jpeg",
+  "assets/photos/img4.jpeg",
 ];
 
 let noPosition = { x: 0, y: 0 };
