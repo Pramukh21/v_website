@@ -108,6 +108,43 @@ h1 {
   position: relative;
 }
 
+
+
+.memories {
+  margin-top: 1.2rem;
+}
+
+.memories h3 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.15rem, 2.8vw, 1.4rem);
+}
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.7rem;
+}
+
+.memory-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+}
+
+.photo-hint {
+  margin: 1rem 0 0;
+  font-size: 0.92rem;
+  opacity: 0.85;
+}
+
+.photo-hint code {
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 8px;
+  padding: 0.08rem 0.4rem;
+}
 .card--success h2 {
   margin-top: 0;
   font-size: clamp(1.9rem, 4.3vw, 2.6rem);

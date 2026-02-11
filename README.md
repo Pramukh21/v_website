@@ -1,12 +1,11 @@
-# Valentine Website 
+# Valentine Website
 
 A cute pastel mini-site with playful animations and a "YES / NO" interaction:
-- **NO button** runs away from the cursor.
+- **NO button** quickly escapes your cursor.
 - **YES button** reveals your custom celebration message.
+- Optional **photo memories gallery** can appear after YES.
 
 ## 1) Quick local check (only for you)
-
-You run this once to verify everything before sharing.
 
 1. Open terminal in this project folder.
 2. Start a local server:
@@ -15,83 +14,70 @@ You run this once to verify everything before sharing.
 python3 -m http.server 8080
 ```
 
-3. Open this in your browser:
+3. Open in your browser:
 
 ```text
 http://localhost:8080
 ```
 
-4. Stop server later with `Ctrl + C` in terminal.
+4. Stop server with `Ctrl + C`.
 
 ---
 
-## 2) Quick testing checklist (before sending link)
+## 2) Quick testing checklist
 
 Open `http://localhost:8080` and verify:
 
-1. Landing text shows:
-   - `Subadhraaaaaaaaaaaa.....`
-   - `Will you be my Valentine?`
-   - `God will guide you in selecting the options`
-2. Move mouse near **NO** button → it should run away.
-3. Click **YES** → success card appears with your custom congratulation message.
-4. Click **Play Again** → returns to first screen.
-5. Resize browser window once → layout still looks nice.
+1. Landing text shows correctly.
+2. Move mouse near **NO** button → it should react quickly and jump away.
+3. Click **YES** → success card appears.
+4. Click **Play Again** → returns to the first screen.
+5. Resize browser window once → layout still looks good.
 
 ---
 
-## 3) Share by URL (she does NOT need to run code)
+## 3) Add your couple photos (shown after YES)
 
-Use **GitHub Pages**. Once published, send her only the URL.
-
-### Step-by-step (recommended)
-
-1. Create a new GitHub repository (example: `valentine-site`).
-2. Push this project to GitHub:
+1. Create this folder if it does not exist:
 
 ```bash
-git init
-git add .
-git commit -m "Valentine website"
-git branch -M main
-git remote add origin https://github.com/<your-username>/valentine-site.git
-git push -u origin main
+mkdir -p assets/photos
 ```
 
-3. Open your repo in GitHub.
-4. Go to **Settings → Pages**.
-5. In **Build and deployment**:
-   - **Source**: `Deploy from a branch`
-   - **Branch**: `main`
-   - **Folder**: `/ (root)`
-6. Click **Save**.
-7. Wait 1–3 minutes and refresh Pages settings.
-8. Copy your live URL (example):
+2. Copy your photos into `assets/photos/` (for example `us-1.jpg`, `us-2.jpg`, etc).
+3. Open `script.js` and update `romanticMemories`:
 
-```text
-https://<your-username>.github.io/valentine-site/
+```js
+const romanticMemories = [
+  "assets/photos/us-1.jpg",
+  "assets/photos/us-2.jpg",
+  "assets/photos/us-3.jpg",
+];
 ```
 
-9. Send that link to her 💌
+4. Refresh the page and click **YES** to see the gallery.
 
-She only needs to click that URL in any browser.
+> Keep file names simple (letters, numbers, `-`) and include correct extensions (`.jpg`, `.png`, `.webp`).
 
 ---
 
-## 4) If your URL shows 404 initially
+## 4) Share by URL (she does NOT need to run code)
 
-This is common for 1–2 minutes after first setup.
+Use **GitHub Pages**.
 
-- Wait a little and refresh.
-- Re-check **Settings → Pages** branch/folder selection.
-- Ensure your latest commit is pushed to `main`.
+1. Push this project to GitHub.
+2. In your repo go to **Settings → Pages**.
+3. Set source to **Deploy from a branch** and choose `main` + `/ (root)`.
+4. Save and wait 1–3 minutes.
+5. Send the generated URL 💌
 
 ---
 
 ## 5) Fast customization guide
 
 - Edit text in `index.html`.
-- Edit colors in `styles.css` at `:root` variables.
-- Tune NO-button movement in `script.js`:
-  - `pushStrength` (bigger = faster escape)
-  - proximity checks inside `isClose`.
+- Edit colors in `styles.css` (`:root` variables).
+- Tune NO-button behavior in `script.js`:
+  - `REPEL_RADIUS` (larger = reacts sooner)
+  - `MAX_PUSH` (larger = faster jumps)
+  - `ESCAPE_COOLDOWN_MS` (smaller = updates more frequently)
