@@ -1,4 +1,4 @@
-# Valentine Website 💖
+# Valentine Website 
 
 A cute pastel mini-site with playful animations and a "YES / NO" interaction:
 - **NO button** runs away from the cursor.
