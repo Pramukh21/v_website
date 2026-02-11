@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Will You Be My Valentine?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app" id="app">
+      <div class="floating-hearts" aria-hidden="true">
+        <span>💖</span>
+        <span>🌸</span>
+        <span>✨</span>
+        <span>💘</span>
+        <span>💕</span>
+      </div>
+
+      <section class="card card--question" id="questionCard">
+        <p class="eyebrow">Subadhraaaaaaaaaaaa.....</p>
+        <h1>Will you be my Valentine?</h1>
+        <p class="subtitle">God will guide you in selecting the options</p>
+
+        <div class="buttons" id="buttonsArea">
+          <button class="btn btn--yes" id="yesBtn">YES 💌</button>
+          <button class="btn btn--no" id="noBtn" type="button">NO 🙈</button>
+        </div>
+      </section>
+
+      <section class="card card--success hidden" id="successCard" aria-live="polite">
+        <h2>YAYYYYY! 🎉</h2>
+        <p>
+          Congratulation Subadhra Avare, You have unlocked an amazing date with the
+          best possible valentine you can get (You wont regret it)... Henge..
+        </p>
+        <button class="btn btn--restart" id="restartBtn">Play Again 🔁</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
