@@ -10,9 +10,9 @@ const photoHint = document.getElementById("photoHint");
 
 const romanticMemories = [
   "assets/photos/img1.jpeg",
-  "assets/photos/img2.jpeg",
+  "assets/photos/img2.jpg",
   "assets/photos/img3.jpeg",
-  "assets/photos/img4.jpeg",
+  "assets/photos/img4.jpg",
 ];
 
 let noPosition = { x: 0, y: 0 };
